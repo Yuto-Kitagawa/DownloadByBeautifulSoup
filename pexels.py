@@ -22,9 +22,12 @@ if __name__ == '__main__':
     # インデックスを写真の名前に付与
     counter = 1
     
+    #写真の数だけ繰り返し
     for download_url_element in soup.select("a.ButtonGroup_buttonOverrides__NuhSe"):
+        # 写真のダウンロードURLを取得
         download_url = download_url_element.get('href')
         
+        # URLに写真と動画があるので、写真の時だけ処理
         if("https://images.pexels.com/photos" in download_url):
             
             # 写真のURLにリクエスト
