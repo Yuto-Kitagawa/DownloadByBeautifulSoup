@@ -32,7 +32,8 @@ if __name__ == '__main__':
             
             # 写真のURLにリクエスト
             r = requests.get(download_url).content
-
+            
+            # 写真をダウンロード
             with open(basename+'image' + str(counter) + '.jpg', 'wb') as handler:
                 handler.write(r)
                 counter += 1
